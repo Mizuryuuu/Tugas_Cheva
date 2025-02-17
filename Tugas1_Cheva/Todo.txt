@@ -1,2 +1,0 @@
-Bikin program sederhana tugas chevalier
-Belajar Kotlin

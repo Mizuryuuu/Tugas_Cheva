@@ -27,6 +27,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.bijana.doms.tugas2_cheva.layout.RegisterLayout
 import com.bijana.doms.tugas2_cheva.ui.theme.Tugas2_ChevaTheme
 
 class MainActivity : ComponentActivity() {
@@ -37,18 +38,20 @@ class MainActivity : ComponentActivity() {
         setContent {
             Tugas2_ChevaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize(),
-                    topBar = {
-                        TopAppBar(
-                            title = {
-                                Text(text = stringResource(R.string.app_name))
-                            },
-                            colors = TopAppBarDefaults.mediumTopAppBarColors(
-                                containerColor = MaterialTheme.colorScheme.primaryContainer,
-                                titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer
-                            )
-                        )
-                    }) { innerPadding ->
-                    EpisodeList(Modifier.padding(innerPadding))
+//                    topBar = {
+//                        TopAppBar(
+//                            title = {
+//                                Text(text = stringResource(R.string.app_name))
+//                            },
+//                            colors = TopAppBarDefaults.mediumTopAppBarColors(
+//                                containerColor = MaterialTheme.colorScheme.primaryContainer,
+//                                titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer
+//                            )
+//                        )
+//                    }
+                    ) { innerPadding ->
+//                    EpisodeList(Modifier.padding(innerPadding))
+                    RegisterLayout(Modifier.padding(innerPadding))
                 }
             }
         }
@@ -95,3 +98,9 @@ fun EpisodeItem(episode: Episode) {
 }
 
 data class Episode(val imageRes: Int, val title: String, val date: String)
+
+@Preview
+@Composable
+private fun MainPreview() {
+
+}

@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Tugas2_Cheva"
+rootProject.name = "TugasCheva_viewModel"
 include(":app")
  
